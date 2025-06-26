@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card glass">
+        <h1 class="title">🌤 Weather App</h1>
+<div class="toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+
+        <div class="input-container">
+          <input type="text" id="city-input" placeholder="Enter city name" />
+          <button id="get-weather-btn">Get Weather</button>
+        </div>
+        <div id="weather-info" class="weather hidden">
+          <h2 id="city-name"></h2>
+          <p id="temperature"></p>
+          <p id="description"></p>
+        </div>
+        <p id="error-message" class="error hidden">
+          ❌ City not found. Please try again.
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

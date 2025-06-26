@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  #city-input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  #get-weather-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1d3557;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #get-weather-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .weather {
+    margin-top: 20px;
+    color: #fff;
+  }
+  
+  #city-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  #temperature {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  #description {
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .error {
+    margin-top: 20px;
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+/* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+}
+
+body.dark-mode .card {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+}
+
+body.dark-mode #city-input {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+body.dark-mode #get-weather-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode #get-weather-btn:hover {
+  background-color: #666;
+}
+
+body.dark-mode .error {
+  background-color: rgba(255, 80, 80, 0.4);
+}
+
+/* Toggle Switch Styles */
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
